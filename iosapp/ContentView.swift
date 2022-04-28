@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var isPrivate: Bool = true
     @State var notificationsEnabled: Bool = false
     @State private var previewIndex = 0
+    @State var sliderValue: Double = 0
+
     var previewOptions = ["Always", "When Unlocked", "Never"]
 
     var body: some View {
@@ -36,24 +38,29 @@ struct ContentView: View {
                         }
                     }
                 }
-                
-                Section(header: Text("ABOUT")) {
-                    HStack {
-                        Text("Version")
-                        Spacer()
-                        Text("2.2.1")
-                    }
+                VStack {
+                            Slider(value: $sliderValue, in: 0...20)
+                            Text("Current slider value: \(sliderValue, specifier: "%.2f")")
+                        }.padding()
+                ZStack {
+                            
                 }
-                
-                Section {
-                    Button(action: {
-                        print("Perform an action here...")
-                    }) {
-                        Text("Submit All information")
-                    }
-                }
+                ScrollView(.horizontal) {
+                                HStack(spacing: 10) {
+                                    ForEach(0..<10) { index in
+                                        Circle()
+                                            .fill(Color.yellow)
+                                            .frame(width: 70, height: 70)
+                                                                          }
+                                }.padding()
+                            }.frame(height: 100)
+
+                Link("Submit", destination: URL(string: "https://github.com/rohitttsingh")!).padding()
             }
             .navigationBarTitle("Create Account")
+            
+       
+
         }
     }
 }
