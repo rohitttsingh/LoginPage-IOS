@@ -2,12 +2,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var username: String = ""
+    @State var username = ""
     @State var password: String = ""
     @State var password2: String = ""
 
     @State var isPrivate: Bool = true
-    @State var notificationsEnabled: Bool = false
+    @State var notificationsEnabled: Bool = true
     @State private var previewIndex = 0
     @State var sliderValue: Double = 0
     @State var selectedDate = Date();
@@ -16,6 +16,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+            
             Form {
                 Section(header: Text("CREATE PROFILE")) {
                     TextField("Enter Your Username", text: $username)
@@ -61,6 +62,9 @@ struct ContentView: View {
                                 }.frame(height: 100)
 
                     Link("Submit", destination: URL(string: "https://quicktech.in/")!).padding()
+                    Button("Button") {
+                        //showToast(message: "lolo")
+                    }.padding()
                 }
                 
             }
@@ -74,5 +78,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
+

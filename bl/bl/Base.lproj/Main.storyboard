@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-ae-vKw">
+                                <rect key="frame" x="107" y="133" width="201" height="89"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glK-we-lj9">
+                                <rect key="frame" x="52" y="565" width="269" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="HwD-jJ-qcW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="gCP-kq-hYf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSt-w7-rVc">
+                                <rect key="frame" x="-52" y="260" width="346" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="397" id="ANN-FI-YuV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="397" id="Uz0-Rl-6Bw"/>
+                                    <constraint firstAttribute="height" constant="34" id="eIm-Vx-J5v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJH-UV-ENe">
+                                <rect key="frame" x="0.0" y="369" width="373" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="24c-da-4yD"/>
+                                    <constraint firstAttribute="height" constant="54" id="Nvc-n2-E8X"/>
+                                    <constraint firstAttribute="width" constant="294" id="wxO-nn-hKE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="oJH-UV-ENe" firstAttribute="top" secondItem="jSt-w7-rVc" secondAttribute="bottom" constant="80" id="0Ux-2h-pAA"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="centerX" secondItem="vmY-ae-vKw" secondAttribute="centerX" id="23F-DO-HgK"/>
+                            <constraint firstItem="oJH-UV-ENe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2jT-Uk-Upi"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="565" id="Cxh-08-k1I"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="centerX" secondItem="oJH-UV-ENe" secondAttribute="centerX" id="KBs-2p-PW0"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="top" secondItem="oJH-UV-ENe" secondAttribute="bottom" constant="142" id="M8J-Ex-xPQ"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="top" secondItem="oJH-UV-ENe" secondAttribute="bottom" constant="142" id="S8A-J5-C2C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="glK-we-lj9" secondAttribute="bottom" constant="210" id="bry-g6-9FM"/>
+                            <constraint firstItem="jSt-w7-rVc" firstAttribute="centerX" secondItem="vmY-ae-vKw" secondAttribute="centerX" id="dYn-2K-fC2"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="pch-6z-C65"/>
+                            <constraint firstItem="vmY-ae-vKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="uCr-ZR-UjJ"/>
+                            <constraint firstItem="vmY-ae-vKw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="vGR-ba-RwF"/>
+                            <constraint firstItem="jSt-w7-rVc" firstAttribute="top" secondItem="vmY-ae-vKw" secondAttribute="bottom" constant="90" id="xpt-1R-c0a"/>
+                            <constraint firstItem="glK-we-lj9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ygi-Ct-kX6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="todoSome" destination="glK-we-lj9" id="2O5-CD-AVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
